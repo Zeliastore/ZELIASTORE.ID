@@ -1,0 +1,363 @@
+buat kan Hero Banner untuk Zeliastore.id dari link yang saya berikan beserta thumbmailnya
+BEST SELLER -https://zeliastore.github.io/EVB-multifunctional-backpack/
+-https://zeliastore.github.io/LARGE-CAPACITY-CASUAL-BAG/
+-https://zeliastore.github.io/Premium-Diamond-Crossbody-Bag/
+-https://zeliastore.github.io/Fashion-anti-theft-handbag/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+buat kan product display untuk Zeliastore.id dari link yang saya berikan beserta thumbmailnya
+BEST SELLER -https://zeliastore.github.io/EVB-multifunctional-backpack/
+-https://zeliastore.github.io/LARGE-CAPACITY-CASUAL-BAG/
+-https://zeliastore.github.io/Premium-Diamond-Crossbody-Bag/
+-https://zeliastore.github.io/Fashion-anti-theft-handbag/
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeliastore.id - Best Seller Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-slide {
+            transition: all 0.5s ease;
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+        .sale-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .arrow-btn {
+            transition: all 0.3s ease;
+        }
+        .arrow-btn:hover {
+            transform: scale(1.1);
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Hero Banner Section -->
+    <section class="relative overflow-hidden">
+        <!-- Banner Background -->
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-900 to-indigo-800 opacity-90"></div>
+        
+        <!-- Banner Content -->
+        <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Text Content -->
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 text-center md:text-left">
+                    <h1 class="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                        Best Seller Collection
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8">
+                        Temukan tas terpopuler kami yang dicintai oleh ribuan pelanggan di seluruh indonesia. Kualitas premium dengan desain penuh gaya
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#products" class="bg-white text-purple-900 hover:bg-purple-100 font-semibold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                            Shop Now
+                        </a>
+                        <a href="#products" class="border-2 border-white text-white hover:bg-white hover:text-purple-900 font-semibold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                            View Collection
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product Carousel -->
+                <div class="md:w-1/2 relative">
+                    <div class="relative h-64 md:h-80 lg:h-96 overflow-hidden rounded-xl shadow-2xl bg-white">
+                        <!-- Slides -->
+                        <div id="slide1" class="hero-slide absolute inset-0 flex items-center justify-center p-4 opacity-100">
+                            <img src="https://static.compgoo.com/b69e6f/9954f67832b8c998cff21fe5b2d853c4.gif" 
+                                 alt="EVB Multifunctional Backpack" 
+                                 class="product-image h-full object-contain">
+                        </div>
+                        <div id="slide2" class="hero-slide absolute inset-0 flex items-center justify-center p-4 opacity-0">
+                            <img src="https://cdn.wshopon.com/image/f479c0d5132d2df64ebdbbfa8f59d6ba644ddcb5-500.png" 
+                                 alt="Large Capacity Casual Bag" 
+                                 class="product-image h-full object-contain">
+                        </div>
+                        <div id="slide3" class="hero-slide absolute inset-0 flex items-center justify-center p-4 opacity-0">
+                            <img src="https://cdn.shopify.com/s/files/1/0743/2998/1207/files/spp_20231212150818_6b4f086a494fb80f5e4e27b20671322d.gif" 
+                                 alt="Premium Diamond Crossbody Bag" 
+                                 class="product-image h-full object-contain">
+                        </div>
+                        <div id="slide4" class="hero-slide absolute inset-0 flex items-center justify-center p-4 opacity-0">
+                            <img src="https://img.drz.lazcdn.com/static/bd/p/2f727d0e42d426bc70f949647238c285.png_720x720q80.png_.webp" 
+                                 alt="Fashion Anti-Theft Handbag" 
+                                 class="product-image h-full object-contain">
+                        </div>
+                        
+                        <!-- Navigation Arrows -->
+                        <button id="prevBtn" class="arrow-btn absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 text-white p-2 rounded-full">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="nextBtn" class="arrow-btn absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 text-white p-2 rounded-full">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <!-- Indicators -->
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                            <button class="indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none" data-slide="0"></button>
+                            <button class="indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none" data-slide="1"></button>
+                            <button class="indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none" data-slide="2"></button>
+                            <button class="indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 focus:outline-none" data-slide="3"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Seller Products Section -->
+    <section id="products" class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Best Sellers</h2>
+            <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Product 1 -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <div class="relative overflow-hidden h-64">
+                    <img src="https://static.compgoo.com/b69e6f/9954f67832b8c998cff21fe5b2d853c4.gif" 
+                         alt="EVB Multifunctional Backpack" 
+                         class="product-image w-full h-full object-contain p-4">
+                    <div class="absolute top-4 right-4 sale-badge bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        BEST SELLER
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">EVB Multifunctional Backpack</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm ml-2">(1,245 reviews)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-purple-900 text-lg">Rp 185.000</span>
+                        <span class="text-sm text-gray-500 line-through">Rp 399.999</span>
+                    </div>
+                    <a href="https://zeliastore.github.io/EVB-multifunctional-backpack/" 
+                       class="mt-4 block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 rounded-lg transition duration-300">
+                        View Details
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <div class="relative overflow-hidden h-64">
+                    <img src="https://cdn.wshopon.com/image/f479c0d5132d2df64ebdbbfa8f59d6ba644ddcb5-500.png" 
+                         alt="Large Capacity Casual Bag" 
+                         class="product-image w-full h-full object-contain p-4">
+                    <div class="absolute top-4 right-4 sale-badge bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        BEST SELLER
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Large Capacity Casual Bag</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm ml-2">(892 reviews)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-purple-900 text-lg">Rp 185.000</span>
+                        <span class="text-sm text-gray-500 line-through">Rp 292.500</span>
+                    </div>
+                    <a href="https://zeliastore.github.io/LARGE-CAPACITY-CASUAL-BAG/" 
+                       class="mt-4 block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 rounded-lg transition duration-300">
+                        View Details
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <div class="relative overflow-hidden h-64">
+                    <img src="https://cdn.shopify.com/s/files/1/0743/2998/1207/files/spp_20231212150818_6b4f086a494fb80f5e4e27b20671322d.gif" 
+                         alt="Premium Diamond Crossbody Bag" 
+                         class="product-image w-full h-full object-contain p-4">
+                    <div class="absolute top-4 right-4 sale-badge bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        BEST SELLER
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Premium Diamond Crossbody Bag</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm ml-2">(1,543 reviews)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-purple-900 text-lg">Rp 179.000</span>
+                        <span class="text-sm text-gray-500 line-through">Rp 249.000</span>
+                    </div>
+                    <a href="https://zeliastore.github.io/Premium-Diamond-Crossbody-Bag/" 
+                       class="mt-4 block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 rounded-lg transition duration-300">
+                        View Details
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                <div class="relative overflow-hidden h-64">
+                    <img src="https://img.drz.lazcdn.com/static/bd/p/2f727d0e42d426bc70f949647238c285.png_720x720q80.png_.webp" 
+                         alt="Fashion Anti-Theft Handbag" 
+                         class="product-image w-full h-full object-contain p-4">
+                    <div class="absolute top-4 right-4 sale-badge bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        BEST SELLER
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">Fashion Anti-Theft Handbag</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm ml-2">(1,076 reviews)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-purple-900 text-lg">Rp 175.000</span>
+                        <span class="text-sm text-gray-500 line-through">Rp 249.000</span>
+                    </div>
+                    <a href="https://zeliastore.github.io/Fashion-anti-theft-handbag/" 
+                       class="mt-4 block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 rounded-lg transition duration-300">
+                        View Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carousel functionality
+            const slides = document.querySelectorAll('.hero-slide');
+            const indicators = document.querySelectorAll('.indicator');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentSlide = 0;
+            let slideInterval;
+            
+            // Initialize carousel
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.style.opacity = i === index ? '1' : '0';
+                });
+                
+                indicators.forEach((indicator, i) => {
+                    if (i === index) {
+                        indicator.classList.add('bg-opacity-100');
+                        indicator.classList.remove('bg-opacity-50');
+                    } else {
+                        indicator.classList.add('bg-opacity-50');
+                        indicator.classList.remove('bg-opacity-100');
+                    }
+                });
+                
+                currentSlide = index;
+            }
+            
+            // Next slide
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Start auto slide
+            function startSlideShow() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            // Stop auto slide
+            function stopSlideShow() {
+                clearInterval(slideInterval);
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                stopSlideShow();
+                startSlideShow();
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                stopSlideShow();
+                startSlideShow();
+            });
+            
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.getAttribute('data-slide'));
+                    showSlide(slideIndex);
+                    stopSlideShow();
+                    startSlideShow();
+                });
+            });
+            
+            // Initialize
+            showSlide(0);
+            startSlideShow();
+            
+            // Pause on hover
+            const carousel = document.querySelector('.relative.h-64');
+            carousel.addEventListener('mouseenter', stopSlideShow);
+            carousel.addEventListener('mouseleave', startSlideShow);
+        });
+    </script>
+</body>
+</html>
